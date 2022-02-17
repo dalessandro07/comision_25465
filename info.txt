@@ -1,0 +1,35 @@
+src/
+    |_index.js
+
+
+JSX : JS + XML
+
+
+
+const p = document.createElement('p');
+p.innerText = 'Hello World';
+
+<p> Hello World </p>
+
+
+
+const App = () => {
+    return "Hola Mundo"
+   
+}
+
+const App = () => "Hola Mundo"
+
+
+
+
+App()   ===   <App/>
+
+
+
+COMPONENTES : 
+
+1) Siempre son funciones
+2) Siempre retornan algo
+3) Siempre arrancan en mayuscula
+4) Siempre retornan una sola cosa
