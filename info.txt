@@ -25,6 +25,10 @@ const App = () => "Hola Mundo"
 
 App()   ===   <App/>
 
+App(1)
+
+
+
 
 
 COMPONENTES : 
@@ -33,3 +37,89 @@ COMPONENTES :
 2) Siempre retornan algo
 3) Siempre arrancan en mayuscula
 4) Siempre retornan una sola cosa
+5) Siempre pueden recibir props
+6) Los props son de SOLO LECTURA
+
+
+COMPONENTES PRESENENTACIONALES : Son componentes que sirven mas que nada para mostrar algo en pantalla, por lo general no buscan la info en el exterior sino que la reciben como props
+
+COMPONENTES CONTAINER : Son componentes que necesitan de una API externa o la generan/leen de algun lugar para funcionar
+
+
+
+
+
+VANILLA JS
+
+function foo(nombre,edad){
+    nombre = "Otro Nombre"
+    console.log(nombre)
+}
+
+foo("Horacio",32)
+
+
+
+
+
+
+
+
+
+
+
+REACT JS
+
+function Foo(parametros){
+    console.log(nombre)
+}
+
+<Foo nombre="Horacio" edad="32"/>
+
+
+
+
+
+
+DESTRUCTURING
+
+
+
+const arr = [1,2,3]
+
+const uno = arr[0]
+const dos = arr[1]
+const tres = arr[2]
+
+const [uno,dos,tres] = arr
+
+Tenes que crear una constante llamada uno, dos y tres que valgan lo que haya en arr en esa posicion
+
+
+
+
+
+
+const obj = {x:1,y:2,z:3}
+
+const x = obj.x
+const y = obj.y
+const z = obj.z
+
+const {x:x,y:y,z:z} = obj
+const {x:miVariable,y:y,z:z} = obj
+const {x,y,z} = obj
+
+creame una constante llamada x que valga lo que haya en obj en la propiedad x
+
+
+
+OBJECT PROPERTY SHORTHAND
+
+const nombre = "Horacio"
+
+const persona = {
+    nombre : nombre
+}
+
+const persona = { nombre }
