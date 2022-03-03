@@ -5,7 +5,7 @@ const Header = () => {
     return (
         <header id="layout-header" className='header'>
             <h1 className='header__title'>Mi E-Commerce</h1>
-            <span class="material-icons">
+            <span className="material-icons">
                 shopping_cart
             </span>
             <Nav />
