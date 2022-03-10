@@ -4,16 +4,18 @@
     box-sizing: border-box;
 }
 
-html , body , #root {
+html,
+body,
+#root {
     height: 100vh;
 }
 
 a {
     text-decoration: none;
-    color : black;
+    color: black;
 }
 
-#root  {
+#root {
     display: flex;
     flex-direction: column;
 }
@@ -24,11 +26,22 @@ a {
     justify-content: space-between;
     padding: 0.5rem 1rem;
     background-color: yellow;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+    > a {
+        color: black;
+        text-decoration: none;
+    }
 }
 
 #layout-header nav a {
     margin-left: 1rem;
+    color: black;
+    text-decoration: none;
+
+    /* &.active {
+        color: red;
+    } */
 }
 
 main {
@@ -41,4 +54,26 @@ footer {
     background-color: yellow;
     text-align: center;
     font-size: 0.8rem;
+}
+
+.productos {
+    /* display: flex;
+    flex-wrap: wrap;
+ */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 1rem;
+    article {
+        /* margin: 0.5rem; */
+        padding: 0.5rem;
+        background-color: #ffffff;
+        border-radius: 3px;
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+        cursor: pointer;
+        &:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 0px 10px 8px rgba(0, 0, 0, 0.1);
+        }
+    }
 }

@@ -268,3 +268,56 @@ $.ajax().then().catch()
 fetch().then().catch()
 
 algunaFuncion().then().catch()
+
+
+
+XMLHttpRequest (XHR) : API WEB para pedir/enviar información de un servidor
+AJAX : Async Javascript And XML (sigla que invento jquery ?)
+FETCH : API WEB para pedir/enviar información de un servidor
+AXIOS : Es una libreria moderna que implementa ajax
+API REST : JSON Representation State Transfer
+
+FTP - TCP / IP - HTTPS - SSH - SMTP - POP - IMAP 
+HTTP : Protocolo de transferencia de hipertexto
+
+
+CLIENTE
+
+url/ip   -   metodo/verbo (get-post-put-patch-delete-et al)  - version
+header
+body/payload
+
+
+
+SERVIDOR
+
+codigo - mensaje - version
+header
+    content-type : application/json
+    content-length : 1000
+body/payload
+
+
+
+fetch("http://jsonplaceholder.typicode.com/users")
+.then((resultado)=>{
+
+    console.log("Todo bien")
+    console.log(resultado) 
+    const respuesta_formateada = resultado.json()
+    return respuesta_formateada    
+})
+.then((usuarios)=>{
+    console.log(usuarios)
+})
+.catch((error)=>{
+    alert("Ups hubo un problema, vuelva a intentarlo")
+    console.log(error)
+})
+
+
+BrowserRouter : Router que se usa en el navegador con la API History
+HashRouter : Router que se usa en el navegador con la API Location
+MemoryRouter : Router que guarda la navegacion en memoria
+StaticRouter : Router que se usa en el servidor (SSR)
+NativeRouter : Route que se usa en mobile
