@@ -321,3 +321,21 @@ HashRouter : Router que se usa en el navegador con la API Location
 MemoryRouter : Router que guarda la navegacion en memoria
 StaticRouter : Router que se usa en el servidor (SSR)
 NativeRouter : Route que se usa en mobile
+
+
+
+
+
+fetch => Promise {}
+
+fetch.then() => Response {}
+
+Response {} => Response.json()
+
+Response.json()  => Promise {}
+
+Si tenes una promesa suelta : continuas con un .then
+Si tenes una promesa adentro de un .then : retornas esa promesa y continuas con un .then abajo
+
+
+Web Services : SOAP, REST, GraphQL, etc.
