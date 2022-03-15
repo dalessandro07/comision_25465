@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-const Contador = ({initial, stock}) => {
+const Contador = ({initial, stock,onAdd}) => {
 
     let [estado, setEstado] = useState(initial)
 
@@ -11,19 +11,28 @@ const Contador = ({initial, stock}) => {
     }
 
     const handleRestar = () => {
-        setEstado(estado - 1)
+        if(estado > initial){
+            setEstado(estado - 1)
+        }
+        
+    }
+    
+    const handleAgregar = () => {
+        //setEstado(0)
+        onAdd(estado)
     }
 
-
-    const handleResetear = () => {
-        setEstado(0)
-    }
+   /*  const handleKeyUp = (e) => {
+        //console.log(e)
+        //console.log(e.target.value)
+    } */
 
     return (
         <div>
             <p>Mi Contador va : {estado}</p>
+            {/* <input type="text" onKeyUp={handleKeyUp}/> */}
             <button onClick={handleSumar}>sumar</button>
-            <button onClick={handleResetear}>resetear</button>
+            <button onClick={handleAgregar}>agregar al carrito</button>
             <button onClick={handleRestar}>restar</button>
         </div>
     )

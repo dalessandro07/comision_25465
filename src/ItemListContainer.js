@@ -14,7 +14,8 @@ const ItemListContainer = () => {
     
     useEffect(() => {
         
-        fetch('/productosPublic.json') 
+        //fetch('/productosPublic.json') 
+        fetch('https://fakestoreapi.com/products')
         .then((response)=>{
             return response.json()
         })
