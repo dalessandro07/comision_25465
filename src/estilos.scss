@@ -82,7 +82,7 @@ footer {
         img {
             height: 200px;
             width: 100%;
-            object-fit : cover;
+            object-fit: cover;
             margin: 10px 0;
         }
 
@@ -90,12 +90,19 @@ footer {
             transform: scale(1.1);
             box-shadow: 0px 0px 10px 8px rgba(0, 0, 0, 0.1);
         }
+
+        .ver-detalle {
+            background-color: yellow;
+            text-decoration: none;
+            color: black;
+            padding: 0.5rem 1rem;
+            border-radius: 3px;
+            box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+        }
     }
 }
 
-
-
-.itemDetail{
+.itemDetail {
     display: grid;
     grid-template-columns: 0.8fr 1.2fr;
     grid-template-rows: 1.4fr 0.6fr;
@@ -118,10 +125,10 @@ footer {
     .titulos {
         grid-area: titulo;
         margin: 1rem;
-        h3{
+        h3 {
             font-size: 2rem;
         }
-        p{
+        p {
             margin-top: 1rem;
             font-size: 1.5rem;
         }

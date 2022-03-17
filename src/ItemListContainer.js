@@ -4,7 +4,6 @@ import { toast } from "react-toastify"
 import { useParams } from "react-router-dom"
 import productos from "./productos.json"
 
-console.log(productos)
 
 const ItemListContainer = () => {
 

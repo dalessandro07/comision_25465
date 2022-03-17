@@ -1,11 +1,16 @@
 import Rate from 'rc-rate';
 import 'rc-rate/assets/index.css';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Contador from './Contador';
 
 const ItemDetail = ({item}) => {
 
+    const [seleccionado,setSeleccionado] = useState(false)
+
     const onAdd = (cantidadSeleccionada) => {
         console.log('Añadir al carrito',cantidadSeleccionada)
+        setSeleccionado(cantidadSeleccionada)
     }
 
     //useNavegate()
@@ -23,7 +28,7 @@ const ItemDetail = ({item}) => {
             </div>
             <p className="descripcion">{item.description}</p>
             <Contador stock={5} initial={1} onAdd={onAdd}/>
-            <button>terminar compra</button>
+            <Link to="/carrito">carrito</Link>
         </article>
     )
 }

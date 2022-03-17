@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import { contexto } from './miContexto'
 import Nav from './Nav'
 
 const Header = () => {
+
+    const {cantidad} = useContext(contexto)
+
     return (
         <header id="layout-header" className='header'>
             <Link to="/">
@@ -12,6 +16,7 @@ const Header = () => {
                 <span className="material-icons">
                     shopping_cart
                 </span>
+                {cantidad}
             </Link>
             <Nav />
         </header>

@@ -32,7 +32,7 @@ const Contador = ({initial, stock,onAdd}) => {
             <p>Mi Contador va : {estado}</p>
             {/* <input type="text" onKeyUp={handleKeyUp}/> */}
             <button onClick={handleSumar}>sumar</button>
-            <button onClick={handleAgregar}>agregar al carrito</button>
+            <button onClick={handleAgregar}>confirmar cantidad seleccionada</button>
             <button onClick={handleRestar}>restar</button>
         </div>
     )

@@ -339,3 +339,22 @@ Si tenes una promesa adentro de un .then : retornas esa promesa y continuas con 
 
 
 Web Services : SOAP, REST, GraphQL, etc.
+
+
+
+
+
+IMPLEMENTACION DE CONTEXTO : 
+1) Crear el contexto con createContext
+2) Sacar el Provider de adentro del contexto
+3) Export de contexto y Provider
+
+LEER EL CONTEXTO
+4) Vas al componente donde queres leer algo del contexto
+5) Traes el hook useContext
+6) Traes el objeto contexto
+7) useas el hook como useContext(contexto)
+
+PATRON PROVIDER / CAMBIAR EL CONTEXTO
+8) Crear un componente nuevo que va a usar el contexto
+9) En el retorno usas el Provider con su prop value (que setea el valor del contexto)
